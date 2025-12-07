@@ -25,7 +25,7 @@ body {
 }
 
 h1 {
-  @apply font-primary text-7xl;
+  @apply font-primary text-7xl md:text-8xl;
 }
 
 h2 {
@@ -44,8 +44,23 @@ a {
   @apply bg-lila-dark rounded-4xl py-3 px-8 text-white text-center;
 }
 
+a:hover{
+  @apply bg-golden transition-colors duration-300;
+}
+
 .template-section {
   @apply py-12 lg:py-24 mx-auto max-w-11/12 lg:max-w-[1080px];
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Escritorio */
@@ -78,4 +93,9 @@ a {
   .flip-responsive {
     transform: scale(0.30);
   }
+}
+
+.swiper-button-prev svg,
+.swiper-button-next svg {
+  color: white;
 }

@@ -6,26 +6,78 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { useFadeIn } from "./hooks/useFadeIn";
 
 function App() {
+  const { ref, show } = useFadeIn()
+  const [scrollY, setScrollY] = useState(0)
+
+  useEffect(() => {
+    const onScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+
+  // Cuántos píxeles tarda en abrirse
+  const maxScroll = 300;
+  const progress = Math.min(scrollY / maxScroll, 1);
 
   return (
     <>
-      <header className="flex flex-col justify-center items-center relative p-8 ">
 
-        <img src="./main-frame.png" alt="Sofia" className="block max-w-[90%] mt-12" />
-        <h1 className="text-center">XV años <span className="block">Danna Sofía</span></h1>
+      <div className="fixed inset-0 z-40 pointer-events-none overflow-hidden">
 
-        <img src="./bg-flowerIzq.png" alt="Arreglo floral" width={480} height={476} className="absolute left-0 bottom-0 w-lg" />
-        <img src="./bg-flowerIzq.png" alt="Arreglo floral" width={480} height={476} className="absolute left-0 top-0 w-lg rotate-90" />
-        <img src="./bg-flowerIzq.png" alt="Arreglo floral" width={480} height={476} className="absolute -right-16 -top-5 w-lg rotate-180" />
-      </header>
+        {/* IZQUIERDA */}
+        <img
+          width={480}
+          height={476}
+          alt="Arreglo floral"
+          src="./bg-flowerIzq.png"
+          style={{
+            transform: `translateX(-${progress * 100}%)`,
+            filter: `blur(${(1 - progress) * .7}px)`,
+            opacity: 1 - progress * 0.1
+          }}
+          className="absolute left-0 top-0 h-full w-full lg:w-3/4 object-cover object-bottom-right transition-transform duration-75"
+        />
+
+        {/* DERECHA */}
+        <img
+          width={480}
+          height={476}
+          alt="Arreglo floral"
+          src="./bg-flowerIzq.png"
+          style={{
+            transform: `translateX(-${progress * 100}%)`,
+            filter: `blur(${(1 - progress) * .8}px)`,
+            opacity: 1 - progress * 0.1
+          }}
+          className="absolute right-0 top-0 h-full w-full lg:w-3/4 object-cover object-bottom-right rotate-180 transition-transform duration-75"
+        />
+
+      </div>
+
+      <div className="min-h-screen lg:min-h-[180vh]">
+
+        {/* ESPACIO BUFFER PARA SCROLL INICIAL */}
+        <div className="h-[500px]">
+
+          <header className="flex flex-col justify-center gap-12 items-center min-h-screen">
+            <img src="./main-frame.png" alt="Sofia" className="block mx-auto w-full lg:max-w-[80%]" />
+            <h1 className="text-center mt-6">XV años <span className="block">Danna Sofía</span></h1>
+          </header>
+
+        </div>
+      </div>
 
       <section className="template-section">
+        {/* <h1 className="text-center mb-20">XV años <span className="block">Danna Sofía</span></h1> */}
 
-        <p className="text-center">
+        <p ref={ref} className={`fade-in ${show ? 'show' : ''} text-center`}>
           Acompáñame a vivir un momento sin igual,
           <span className="block">donde mis sueños corren libres hacia lo ideal.</span>
           <span className="block">Hoy comienza un capítulo lleno de ilusión,</span>
@@ -34,9 +86,9 @@ function App() {
 
         <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] items-center gap-12 lg:gap-4 lg:mt-12">
 
-          <img src="./marco-floresRe.png" alt="Sofia" className="block lg:max-w-[90%] mt-12" />
+          <img src="./marco-floresRe.png" alt="Sofia" className={`fade-in ${show ? 'show' : ''} block lg:max-w-[90%] mt-12`} />
 
-          <div className="">
+          <div className={`fade-in ${show ? 'show' : ''}`}>
             <p className="text-center lg:text-left text-6xl! lg:text-8xl!">21</p>
             <p className="text-center lg:text-left text-7xl! lg:text-9xl! font-secundary">Febrero</p>
             <p className="text-center lg:text-left text-6xl! lg:text-8xl!">2026</p>
@@ -47,7 +99,7 @@ function App() {
       </section>
 
       <section className="py-10 lg:py-14 bg-lila-dark">
-        <h2 className="text-white mb-2 lg:mb-10">Faltan:</h2>
+        <h2 className={`fade-in ${show ? 'show' : ''} text-white mb-2 lg:mb-10`}>Faltan:</h2>
 
         <span className="max-w-11/12 md:max-w-xl mx-auto flex justify-center">
           <FlipClockCountdown
@@ -74,23 +126,30 @@ function App() {
       </section>
 
       <section className="template-section">
-        <h2>Itinerario</h2>
+        <h2 className={`fade-in ${show ? 'show' : ''}`}>Itinerario</h2>
 
-        <FaChurch className="text-lila-dark text-6xl mx-auto" />
-        <p className="text-center">Ceremonia</p>
-        <p className="text-center">4:30 p.m.</p>
+        <div className={`fade-in ${show ? 'show' : ''}`}>
+          <FaChurch className="text-lila-dark text-6xl mx-auto" />
+          <p className="text-center">Ceremonia</p>
+          <p className="text-center">4:30 p.m.</p>
+        </div>
 
-        <FaGlassCheers className="text-lila-dark text-6xl mx-auto mt-11" />
-        <p className="text-center">Evento</p>
-        <p className="text-center">5:30 p.m.</p>
+        <div className={`fade-in ${show ? 'show' : ''}`}>
+          <FaGlassCheers className="text-lila-dark text-6xl mx-auto mt-11" />
+          <p className="text-center">Evento</p>
+          <p className="text-center">5:30 p.m.</p>
+        </div>
 
-        <FaMapMarkerAlt className="text-lila-dark text-5xl mx-auto mt-11" />
-        <p className="text-center">Jardín de eventos Azarel</p>
-        <a href="https://maps.app.goo.gl/9H9agY5havCT3Z7o7" className="block mx-auto mt-4 max-w-2/3 md:max-w-80 text-2xl lg:text-4xl">Ver ubicación</a>
+        <div className={`fade-in ${show ? 'show' : ''}`}>
+          <FaMapMarkerAlt className="text-lila-dark text-5xl mx-auto mt-11" />
+          <p className="text-center">Jardín de eventos Azarel</p>
+          <a href="https://maps.app.goo.gl/9H9agY5havCT3Z7o7" className="block mx-auto mt-4 max-w-2/3 md:max-w-80 text-2xl lg:text-4xl">Ver ubicación</a>
+        </div>
+
       </section>
 
       <section className="template-section">
-        <h2>Galería</h2>
+        <h2 className="{`fade-in ${show ? 'show' : ''}`}">Galería</h2>
 
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
@@ -107,6 +166,38 @@ function App() {
           <SwiperSlide><img src="./galeria/04.JPG" alt="galeria" /></SwiperSlide>
           <SwiperSlide><img src="./galeria/05.JPG" alt="galeria" /></SwiperSlide>
         </Swiper>
+      </section>
+
+      <section className="py-10 lg:py-14 bg-[url('./bg-fondoRe.jpg')] bg-repeat-y bg-center bg-contain md:bg-cover mt-12">
+        <div className="mx-auto max-w-11/12 lg:max-w-[1500px]">
+          <h2 className={`fade-in ${show ? 'show' : ''} text-white! text-base/5 mb-10!`}>Te esperamos en compañía de...</h2>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-4">
+
+            <figure className={`fade-in ${show ? 'show' : ''}`}>
+              <img src="./marco-padres.png" alt="Padres" width={500} className="block mx-auto mb-4" />
+              <figcaption className="text-center text-white">Padres:</figcaption>
+              <figcaption className="text-center text-4xl text-white">Míriam Díaz &<span className="block">Marco Antonio</span></figcaption>
+            </figure>
+
+            <figure className={`fade-in ${show ? 'show' : ''}`}>
+              <img src="./marco-padrinos.png" alt="Padres" width={500} className="block mx-auto mb-4" />
+              <figcaption className="text-center text-white">Padrinos</figcaption>
+              <figcaption className="text-center text-4xl text-white">Roxana Díaz &<span className="block">Daniel Pérez</span></figcaption>
+            </figure>
+
+          </div>
+
+          <a
+            className={`fade-in ${show ? 'show' : ''} block mx-auto mt-12 lg:mt-16 text-2xl lg:text-4xl`}
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfI0WBrpBbwDtsmnOTd4rizEUuFZ1oUTjFcxOsHVQwoiJxIOQ/viewform"
+          >
+            Confirmar asistencia
+          </a>
+
+        </div>
+
+
       </section>
     </>
   )
