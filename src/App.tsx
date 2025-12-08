@@ -106,7 +106,7 @@ function App() {
         </div>
       </div>
 
-      <section className="template-section">
+      <section className="template-section mt-16">
         {/* <h1 className="text-center mb-20">XV años <span className="block">Danna Sofía</span></h1> */}
 
         <p className="fade-in text-center">
@@ -203,7 +203,7 @@ function App() {
         </Swiper>
       </section>
 
-      <section className="py-10 lg:py-14 bg-[url('./bg-fondoRe.jpg')] bg-repeat-y bg-center bg-contain md:bg-cover mt-12">
+      <section id="padrinos" className="py-10 lg:py-16 mt-12">
         <div className="mx-auto max-w-11/12 lg:max-w-[1500px]">
           <h2 className="fade-in text-white! text-base/5 mb-10!">Te esperamos en compañía de...</h2>
 
@@ -215,7 +215,7 @@ function App() {
                 <source srcSet="./marco-padres.webp" type="image/webp" />
                 <img src="./marco-padres.png" alt="Padres" className="block mx-auto mb-4" width={500} height={550} />
               </picture>
-              
+
               <figcaption className="text-center text-white">Padres:</figcaption>
               <figcaption className="text-center text-4xl text-white">Míriam Díaz &<span className="block">Marco Antonio</span></figcaption>
             </figure>
@@ -234,6 +234,7 @@ function App() {
           </div>
 
           <a
+            target="_blank"
             className="fade-in block mx-auto mt-12 lg:mt-16 text-2xl lg:text-4xl"
             href="https://docs.google.com/forms/d/e/1FAIpQLSfI0WBrpBbwDtsmnOTd4rizEUuFZ1oUTjFcxOsHVQwoiJxIOQ/viewform"
           >
@@ -241,8 +242,23 @@ function App() {
           </a>
 
         </div>
+      </section>
 
+      <section className="template-section ">
+        <h2>¡No olvides compartirnos tus fotos!</h2>
 
+        <picture className="block my-10">
+          <source srcSet="./QR.webp" type="image/webp" />
+          <img src="./QR.jpeg" alt="QR" className="block mx-auto" width={500} height={423} />
+        </picture>
+
+        <a
+          target="_blank"
+          className="fade-in block mx-auto mt-12 lg:mt-16 text-2xl lg:text-4xl"
+          href="https://photos.google.com/share/AF1QipMMmoFRRD33Mo3wJI3jfmNGe3H8TiGFfeX17lgjYaBho6uzaA6yPSjxJrTpyP6O2g?key=VmZfcGZVVE05OFdrWldEWW5vZHpfQ0ZYZ2lOeV9B"
+        >
+          <span className="font-primary!">¡</span> ó accede a este link <span className="font-primary!">!</span>
+        </a>
       </section>
     </>
   )

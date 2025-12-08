@@ -21,7 +21,11 @@
 
 body {
   min-height: 100vh;
-  @apply m-0 text-golden bg-[url('./bg-fondo-liso.jpg')] bg-repeat-y bg-center bg-contain overflow-x-hidden font-text text-2xl;
+  @apply m-0 text-golden bg-[url('/bg-fondo-liso.jpg')] bg-repeat-y bg-center bg-contain overflow-x-hidden font-text text-2xl;
+}
+
+#padrinos {
+  @apply bg-[url('/bg-fondoRe.jpg')] bg-repeat-y bg-center bg-contain md:bg-cover
 }
 
 h1 {
@@ -44,7 +48,7 @@ a {
   @apply bg-lila-dark rounded-4xl py-3 px-8 text-white text-center;
 }
 
-a:hover{
+a:hover {
   @apply bg-golden transition-colors duration-300;
 }
 
