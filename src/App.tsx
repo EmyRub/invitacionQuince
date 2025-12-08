@@ -234,7 +234,7 @@ function App() {
           </div>
 
           <a
-            target="_blank"
+            target="_blanc"
             className="fade-in block mx-auto mt-12 lg:mt-16 text-2xl lg:text-4xl"
             href="https://docs.google.com/forms/d/e/1FAIpQLSfI0WBrpBbwDtsmnOTd4rizEUuFZ1oUTjFcxOsHVQwoiJxIOQ/viewform"
           >
@@ -253,7 +253,7 @@ function App() {
         </picture>
 
         <a
-          target="_blank"
+          target="_blanc"
           className="fade-in block mx-auto mt-12 lg:mt-16 text-2xl lg:text-4xl"
           href="https://photos.google.com/share/AF1QipMMmoFRRD33Mo3wJI3jfmNGe3H8TiGFfeX17lgjYaBho6uzaA6yPSjxJrTpyP6O2g?key=VmZfcGZVVE05OFdrWldEWW5vZHpfQ0ZYZ2lOeV9B"
         >
