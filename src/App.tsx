@@ -203,6 +203,9 @@ function App() {
           <SwiperSlide><img src="./galeria/03.JPG" alt="galeria" /></SwiperSlide>
           <SwiperSlide><img src="./galeria/04.JPG" alt="galeria" /></SwiperSlide>
           <SwiperSlide><img src="./galeria/05.JPG" alt="galeria" /></SwiperSlide>
+          <SwiperSlide><img src="./galeria/06.jpg" alt="galeria" /></SwiperSlide>
+          <SwiperSlide><img src="./galeria/07.jpg" alt="galeria" /></SwiperSlide>
+          
         </Swiper>
       </section>
 
