@@ -127,6 +127,9 @@ function App() {
             <p className="text-center lg:text-left text-6xl! lg:text-8xl!">21</p>
             <p className="text-center lg:text-left text-7xl! lg:text-9xl! font-secundary">Febrero</p>
             <p className="text-center lg:text-left text-6xl! lg:text-8xl!">2026</p>
+            <picture>
+              <img src="./calendario.png" alt="Calendario" className="fade-in block lg:max-w-[90%] mt-12" width={639} height={720} />
+            </picture>
           </div>
 
         </div>
@@ -203,7 +206,7 @@ function App() {
         </Swiper>
       </section>
 
-      <section id="padrinos" className="py-10 lg:py-16 mt-12">
+      <section id="padrinos" className="py-10 lg:py-16 lg:mt-12">
         <div className="mx-auto max-w-11/12 lg:max-w-[1500px]">
           <h2 className="fade-in text-white! text-base/5 mb-10!">Te esperamos en compañía de...</h2>
 
