@@ -101,7 +101,7 @@ function App() {
               <img src="./main-frame.png" alt="Sofia" className="block mx-auto w-full lg:max-w-[80%]" width={1500} height={1320} />
             </picture>
 
-            <h1 className="mt-6">XV años <span className="block">Danna Sofía</span></h1>
+            <h1 className="mt-6 fade-in">XV años <span className="block">Danna Sofía</span></h1>
           </header>
 
         </div>
@@ -221,7 +221,7 @@ function App() {
       </section>
 
       <section id="padrinos" className="py-10 lg:py-16 lg:mt-12">
-        <div className="mx-auto max-w-11/12 lg:max-w-[1500px]">
+        <div className="mx-auto max-w-11/12 lg:max-w-5xl">
           <h2 className="fade-in text-white! text-base/5 mb-10!">Te esperamos en compañía de...</h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-4">
