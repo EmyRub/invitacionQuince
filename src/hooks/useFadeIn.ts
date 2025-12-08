@@ -1,19 +1,22 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect } from 'react'
 
 export function useFadeIn() {
-  const ref = useRef(null)
-  const [show, setShow] = useState(false)
-
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => entry.isIntersecting && setShow(true),
-      { threshold: 0.2 }
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show')
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.15 }
     )
 
-    if (ref.current) observer.observe(ref.current)
+    const elements = document.querySelectorAll('.fade-in')
+    elements.forEach(el => observer.observe(el))
 
     return () => observer.disconnect()
   }, [])
-
-  return { ref, show }
 }
