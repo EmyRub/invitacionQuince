@@ -186,15 +186,15 @@ function App() {
       </section>
 
       <section id="vestimenta" className="py-10 lg:py-18 bg-lila-dark text-white">
-        <h2>Código de vestimenta</h2>
-        <div className="flex justify-center gap-4 my-8">
+        <h2 className="fade-in">Código de vestimenta</h2>
+        <div className="flex justify-center gap-4 my-8 fade-in">
           <GiDress className="text-lila text-6xl fade-in" />
           <FaHatCowboy className="text-lila text-6xl fade-in" />
         </div>
-        <p className="text-lila">FORMAL</p>
+        <p className="text-lila fade-in">FORMAL</p>
 
-        <h3 className="mt-20">Sugerencia</h3>
-        <p className="text-4xl! max-w-4xl mx-auto text-lila">Amablemente, el color lila únicamente para la quinceañera</p>
+        <h3 className="mt-20 fade-in">Sugerencia</h3>
+        <p className="text-4xl! max-w-4xl mx-auto text-lila fade-in">Amablemente, el color lila únicamente para la quinceañera</p>
       </section>
 
       <section className="template-section">
