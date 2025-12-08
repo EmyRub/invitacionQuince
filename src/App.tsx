@@ -107,7 +107,7 @@ function App() {
         </div>
       </div>
 
-      <section className="template-section mt-16">   
+      <section className="template-section mt-16">
 
         <p className="fade-in">
           Acompáñame a vivir un momento sin igual,
@@ -128,7 +128,8 @@ function App() {
             <p className="lg:text-left! text-7xl! lg:text-9xl! font-secundary">Febrero</p>
             <p className="lg:text-left! text-6xl! lg:text-8xl!">2026</p>
             <picture>
-              <img src="./calendario.png" alt="Calendario" className="fade-in block lg:max-w-[90%] mt-12" width={639} height={720} />
+              <source srcSet="./calendario.webp" type="image/webp" />
+              <img src="./calendario.png" alt="Calendario" className="fade-in block lg:max-w-[90%] mt-12" width={550} height={450} />
             </picture>
           </div>
 
