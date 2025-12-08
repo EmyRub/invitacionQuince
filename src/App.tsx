@@ -1,6 +1,6 @@
 import "@leenguyen/react-flip-clock-countdown/dist/index.css";
 import FlipClockCountdown from "@leenguyen/react-flip-clock-countdown";
-import { FaChurch, FaGlassCheers, FaMapMarkerAlt } from "react-icons/fa";
+import { FaChurch, FaGlassCheers, FaMapMarkerAlt, FaHatCowboy } from "react-icons/fa";
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { useFadeIn } from "./hooks/useFadeIn";
+import { GiDress } from "react-icons/gi";
 
 function App() {
   useFadeIn()
@@ -100,16 +101,15 @@ function App() {
               <img src="./main-frame.png" alt="Sofia" className="block mx-auto w-full lg:max-w-[80%]" width={1500} height={1320} />
             </picture>
 
-            <h1 className="text-center mt-6">XV años <span className="block">Danna Sofía</span></h1>
+            <h1 className="mt-6">XV años <span className="block">Danna Sofía</span></h1>
           </header>
 
         </div>
       </div>
 
-      <section className="template-section mt-16">
-        {/* <h1 className="text-center mb-20">XV años <span className="block">Danna Sofía</span></h1> */}
+      <section className="template-section mt-16">   
 
-        <p className="fade-in text-center">
+        <p className="fade-in">
           Acompáñame a vivir un momento sin igual,
           <span className="block">donde mis sueños corren libres hacia lo ideal.</span>
           <span className="block">Hoy comienza un capítulo lleno de ilusión,</span>
@@ -124,9 +124,9 @@ function App() {
           </picture>
 
           <div className="fade-in">
-            <p className="text-center lg:text-left text-6xl! lg:text-8xl!">21</p>
-            <p className="text-center lg:text-left text-7xl! lg:text-9xl! font-secundary">Febrero</p>
-            <p className="text-center lg:text-left text-6xl! lg:text-8xl!">2026</p>
+            <p className="lg:text-left! text-6xl! lg:text-8xl!">21</p>
+            <p className="lg:text-left! text-7xl! lg:text-9xl! font-secundary">Febrero</p>
+            <p className="lg:text-left! text-6xl! lg:text-8xl!">2026</p>
             <picture>
               <img src="./calendario.png" alt="Calendario" className="fade-in block lg:max-w-[90%] mt-12" width={639} height={720} />
             </picture>
@@ -159,8 +159,6 @@ function App() {
             }}
           />
         </span>
-
-
       </section>
 
       <section className="template-section">
@@ -168,22 +166,34 @@ function App() {
 
         <div className="fade-in">
           <FaChurch className="text-lila-dark text-6xl mx-auto" />
-          <p className="text-center">Ceremonia</p>
-          <p className="text-center">4:30 p.m.</p>
+          <p>Ceremonia</p>
+          <p>4:30 p.m.</p>
         </div>
 
         <div className="fade-in">
           <FaGlassCheers className="text-lila-dark text-6xl mx-auto mt-11" />
-          <p className="text-center">Evento</p>
-          <p className="text-center">5:30 p.m.</p>
+          <p>Evento</p>
+          <p>5:30 p.m.</p>
         </div>
 
         <div className="fade-in">
           <FaMapMarkerAlt className="text-lila-dark text-5xl mx-auto mt-11" />
-          <p className="text-center">Jardín de eventos Azarel</p>
+          <p>Jardín de eventos Azarel</p>
           <a href="https://maps.app.goo.gl/9H9agY5havCT3Z7o7" className="block mx-auto mt-4 max-w-2/3 md:max-w-80 text-2xl lg:text-4xl">Ver ubicación</a>
         </div>
 
+      </section>
+
+      <section id="vestimenta" className="py-10 lg:py-18 bg-lila-dark text-white">
+        <h2>Código de vestimenta</h2>
+        <div className="flex justify-center gap-4 my-8">
+          <GiDress className="text-lila text-6xl fade-in" />
+          <FaHatCowboy className="text-lila text-6xl fade-in" />
+        </div>
+        <p className="text-lila">FORMAL</p>
+
+        <h3 className="mt-20">Sugerencia</h3>
+        <p className="text-4xl! max-w-4xl mx-auto text-lila">Amablemente, el color lila únicamente para la quinceañera</p>
       </section>
 
       <section className="template-section">
@@ -205,7 +215,7 @@ function App() {
           <SwiperSlide><img src="./galeria/05.JPG" alt="galeria" /></SwiperSlide>
           <SwiperSlide><img src="./galeria/06.jpg" alt="galeria" /></SwiperSlide>
           <SwiperSlide><img src="./galeria/07.jpg" alt="galeria" /></SwiperSlide>
-          
+
         </Swiper>
       </section>
 
@@ -222,8 +232,8 @@ function App() {
                 <img src="./marco-padres.png" alt="Padres" className="block mx-auto mb-4" width={500} height={550} />
               </picture>
 
-              <figcaption className="text-center text-white">Padres:</figcaption>
-              <figcaption className="text-center text-4xl text-white">Míriam Díaz &<span className="block">Marco Antonio</span></figcaption>
+              <figcaption className="text-white">Padres:</figcaption>
+              <figcaption className="text-4xl text-white">Míriam Díaz &<span className="block">Marco Antonio</span></figcaption>
             </figure>
 
             <figure className="fade-in">
@@ -233,8 +243,8 @@ function App() {
                 <img src="./marco-padrinos.png" alt="Padrinos" className="block mx-auto mb-4" width={500} height={550} />
               </picture>
 
-              <figcaption className="text-center text-white">Padrinos</figcaption>
-              <figcaption className="text-center text-4xl text-white">Roxana Díaz &<span className="block">Daniel Pérez</span></figcaption>
+              <figcaption className="text-white">Padrinos</figcaption>
+              <figcaption className="text-4xl text-white">Roxana Díaz &<span className="block">Daniel Pérez</span></figcaption>
             </figure>
 
           </div>
@@ -251,9 +261,9 @@ function App() {
       </section>
 
       <section className="template-section ">
-        <h2>¡No olvides compartirnos tus fotos!</h2>
+        <h2 className="fade-in">¡No olvides compartirnos tus fotos!</h2>
 
-        <picture className="block my-10">
+        <picture className="block my-10 fade-in">
           <source srcSet="./QR.webp" type="image/webp" />
           <img src="./QR.jpeg" alt="QR" className="block mx-auto" width={500} height={423} />
         </picture>

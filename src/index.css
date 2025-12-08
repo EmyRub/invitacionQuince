@@ -28,16 +28,29 @@ body {
   @apply bg-[url('/bg-fondoRe.jpg')] bg-repeat-y bg-center bg-contain md:bg-cover
 }
 
+#vestimenta{
+  @apply bg-[url('/bg-vestimenta.jpg')] bg-repeat-y bg-top bg-cover md:bg-cover bg-fixed
+}
+
+h1, h2, h3, p, a {
+  @apply text-center
+}
+
+h2,
+h3 {
+  @apply font-secundary
+}
+
 h1 {
   @apply font-primary text-7xl md:text-8xl;
 }
 
 h2 {
-  @apply font-secundary text-7xl lg:text-8xl text-center mb-4;
+  @apply text-7xl lg:text-8xl mb-4;
 }
 
 h3 {
-  @apply text-4xl lg:text-5xl text-center;
+  @apply text-6xl lg:text-7xl mb-6;
 }
 
 p {
@@ -45,7 +58,7 @@ p {
 }
 
 a {
-  @apply bg-lila-dark rounded-4xl py-3 px-8 text-white text-center;
+  @apply bg-lila-dark rounded-4xl py-3 px-8 text-white;
 }
 
 a:hover {
