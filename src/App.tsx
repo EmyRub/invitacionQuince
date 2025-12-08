@@ -230,7 +230,7 @@ function App() {
 
               <picture>
                 <source srcSet="./marco-padres.webp" type="image/webp" />
-                <img src="./marco-padres.png" alt="Padres" className="block mx-auto mb-4" width={500} height={550} />
+                <img src="./marco-padres.png" alt="Padres" className="block mx-auto mb-4" width={400} height={450} />
               </picture>
 
               <figcaption className="text-white">Padres:</figcaption>
@@ -241,7 +241,7 @@ function App() {
 
               <picture>
                 <source srcSet="./marco-padrinos.webp" type="image/webp" />
-                <img src="./marco-padrinos.png" alt="Padrinos" className="block mx-auto mb-4" width={500} height={550} />
+                <img src="./marco-padrinos.png" alt="Padrinos" className="block mx-auto mb-4" width={400} height={450} />
               </picture>
 
               <figcaption className="text-white">Padrinos</figcaption>
