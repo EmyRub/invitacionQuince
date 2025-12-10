@@ -12,6 +12,8 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { useFadeIn } from "./hooks/useFadeIn";
 import { GiDress } from "react-icons/gi";
 
+import MusicGate from "./MusicGate.tsx";
+
 function App() {
   useFadeIn()
   const [scrollY, setScrollY] = useState(0)
@@ -28,9 +30,10 @@ function App() {
   const maxScroll = 300;
   const progress = Math.min(scrollY / maxScroll, 1);
 
+
   return (
     <>
-
+      <MusicGate />
       <div className="fixed inset-0 z-40 pointer-events-none overflow-hidden">
 
         {/* IZQUIERDA */}
@@ -102,10 +105,7 @@ function App() {
             </picture>
 
             <h1 className="mt-6 fade-in">XV años <span className="block">Danna Sofía</span></h1>
-            <audio src="./indila.mp4" autoPlay loop controls className="mx-auto fade-in">
-              <source src="./indila.mp4" type="audio/mp4" />
-              Tu navegador no soporta el elemento de audio.
-            </audio>
+
           </header>
 
         </div>
