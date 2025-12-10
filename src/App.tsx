@@ -102,12 +102,18 @@ function App() {
             </picture>
 
             <h1 className="mt-6 fade-in">XV años <span className="block">Danna Sofía</span></h1>
+            <audio src="./indila.mp4" autoPlay loop controls className="mx-auto fade-in">
+              <source src="./indila.mp4" type="audio/mp4" />
+              Tu navegador no soporta el elemento de audio.
+            </audio>
           </header>
 
         </div>
       </div>
 
       <section className="template-section mt-16">
+
+
 
         <p className="fade-in">
           Acompáñame a vivir un momento sin igual,
