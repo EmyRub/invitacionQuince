@@ -63,7 +63,7 @@ function App() {
           />
         </picture>*/}
 
-        {/* DERECHA 
+      {/* DERECHA 
         <picture>
           <source
             srcSet="./bg-flowerIzq.webp"
@@ -230,40 +230,46 @@ function App() {
         <div className="mx-auto max-w-11/12 lg:max-w-5xl">
           <h2 className="fade-in text-white! text-base/5 mb-10!">Te esperamos en compañía de...</h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-4">
+          <div className="flex flex-wrap justify-center gap-12 lg:gap-6">
 
-            <figure className="fade-in">
+            <figure className="fade-in flex-1/4">
 
               <picture>
                 <source srcSet="./marco-padres.webp" type="image/webp" />
                 <img src="./marco-padres.png" alt="Padres" className="block mx-auto mb-4" width={400} height={450} />
               </picture>
 
-              <figcaption className="text-white">Padres:</figcaption>
-              <figcaption className="text-4xl text-white">Míriam Díaz &<span className="block">Marco Antonio</span></figcaption>
+              <figcaption className="text-white text-4xl">Mis Padres</figcaption>
             </figure>
 
-            <figure className="fade-in">
+            <figure className="fade-in flex-11/12 md:flex-1/3 lg:flex-1/4">
               <picture>
-                <source srcSet="./marco-padrinos.webp" type="image/webp" />
-                <img src="./marco-padrinos.png" alt="Padrinos" className="block mx-auto mb-4" width={400} height={450} />
+                <source srcSet="./marco-hermanita.webp" type="image/webp" />
+                <img src="./marco-hermanita.png" alt="hermanita" className="block mx-auto mb-4" width={400} height={450} />
               </picture>
 
-              <figcaption className="text-white">Padrinos</figcaption>
-              <figcaption className="text-4xl text-white">Roxana Díaz &<span className="block">Daniel Pérez</span></figcaption>
+              <figcaption className="text-white text-4xl">Mi hermanita</figcaption>
             </figure>
 
-            <figure className="fade-in">
+            <figure className="fade-in flex-11/12 md:flex-1/3 lg:flex-1/4">
               <picture>
-                <source srcSet="./marco-tios.webp" type="image/webp" />
-                <img src="./marco-tios.png" alt="tios" className="block mx-auto mb-4" width={400} height={450} />
+                <source srcSet="./marco-abuela.webp" type="image/webp" />
+                <img src="./marco-abuela.png" alt="abuela" className="block mx-auto mb-4" width={400} height={450} />
               </picture>
-
-              <figcaption className="text-white">Tíos</figcaption>
-              <figcaption className="text-4xl text-white">Roxana Díaz &<span className="block">Daniel Pérez</span></figcaption>
+              <figcaption className="text-white text-4xl">Mi abuela</figcaption>
             </figure>
 
+            <picture className="fade-in flex-11/12 md:flex-1/3 lg:flex-1/4">
+              <source srcSet="./marco-padrinos.webp" type="image/webp" />
+              <img src="./marco-padrinos.png" alt="padrinos" className="block mx-auto mb-4" width={400} height={450} />
+            </picture>
+
+            <picture className="fade-in flex-11/12 md:flex-1/3 lg:flex-1/4">
+              <source srcSet="./marco-padrino.webp" type="image/webp" />
+              <img src="./marco-padrino.png" alt="padrino" className="block mx-auto mb-4" width={400} height={450} />
+            </picture>
           </div>
+          <p className="center text-4xl text-white fade-in">Mis padrinos</p>
 
           <a
             target="_blanc"
