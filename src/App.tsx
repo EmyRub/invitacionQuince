@@ -1,6 +1,6 @@
 import "@leenguyen/react-flip-clock-countdown/dist/index.css";
 import FlipClockCountdown from "@leenguyen/react-flip-clock-countdown";
-import { FaChurch, FaGlassCheers, FaMapMarkerAlt, FaHatCowboy } from "react-icons/fa";
+import { FaChurch, FaGlassCheers, FaMapMarkerAlt } from "react-icons/fa";
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -10,7 +10,7 @@ import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { useFadeIn } from "./hooks/useFadeIn";
-import { GiDress } from "react-icons/gi";
+
 
 import MusicGate from "./MusicGate.tsx";
 
@@ -193,8 +193,7 @@ function App() {
         <div className="mx-auto max-w-11/12 lg:max-w-5xl">
           <h2 className="fade-in">Código de vestimenta</h2>
           <div className="flex justify-center gap-4 my-8 fade-in">
-            <GiDress className="text-lila text-6xl fade-in" />
-            <FaHatCowboy className="text-lila text-6xl fade-in" />
+             <img src="./dresscode.png" alt="dressCode" className="block mx-auto" width={150} height={25} />      
           </div>
           <p className="text-lila fade-in">FORMAL</p>
 
@@ -269,7 +268,7 @@ function App() {
               <img src="./marco-padrino.png" alt="padrino" className="block mx-auto mb-4" width={400} height={450} />
             </picture>
           </div>
-          <p className="center text-4xl text-white fade-in">Mis padrinos</p>
+          <p className="center text-4xl lg:text-xl text-white fade-in">Mis padrinos</p>
 
           <a
             target="_blanc"
