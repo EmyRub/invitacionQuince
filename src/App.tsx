@@ -6,7 +6,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { useFadeIn } from "./hooks/useFadeIn";
@@ -16,27 +16,27 @@ import MusicGate from "./MusicGate.tsx";
 
 function App() {
   useFadeIn()
-  const [scrollY, setScrollY] = useState(0)
+  // const [scrollY, setScrollY] = useState(0)
 
   /**Cortina flores */
-  useEffect(() => {
-    const onScroll = () => setScrollY(window.scrollY);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  // useEffect(() => {
+  //   const onScroll = () => setScrollY(window.scrollY);
+  //   window.addEventListener("scroll", onScroll);
+  //   return () => window.removeEventListener("scroll", onScroll);
+  // }, []);
 
 
   // Cuántos píxeles tarda en abrirse
-  const maxScroll = 300;
-  const progress = Math.min(scrollY / maxScroll, 1);
+  // const maxScroll = 300;
+  // const progress = Math.min(scrollY / maxScroll, 1);
 
 
   return (
     <>
       <MusicGate />
-      <div className="fixed inset-0 z-40 pointer-events-none overflow-hidden">
+      {/* <div className="fixed inset-0 z-40 pointer-events-none overflow-hidden">
 
-        {/* IZQUIERDA */}
+        IZQUIERDA 
         <picture>
           <source
             srcSet="./bg-flowerIzq.webp"
@@ -61,9 +61,9 @@ function App() {
             }}
             className="absolute left-0 top-0 h-full w-full lg:w-3/4 object-cover object-bottom-right transition-transform duration-75"
           />
-        </picture>
+        </picture>*/}
 
-        {/* DERECHA */}
+        {/* DERECHA 
         <picture>
           <source
             srcSet="./bg-flowerIzq.webp"
@@ -90,7 +90,7 @@ function App() {
           />
         </picture>
 
-      </div>
+      </div>*/}
 
       <div className="min-h-screen lg:min-h-[180vh]">
 
@@ -112,8 +112,6 @@ function App() {
       </div>
 
       <section className="template-section mt-16">
-
-
 
         <p className="fade-in">
           Acompáñame a vivir un momento sin igual,
@@ -232,7 +230,7 @@ function App() {
         <div className="mx-auto max-w-11/12 lg:max-w-5xl">
           <h2 className="fade-in text-white! text-base/5 mb-10!">Te esperamos en compañía de...</h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-4">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-4">
 
             <figure className="fade-in">
 
@@ -246,13 +244,22 @@ function App() {
             </figure>
 
             <figure className="fade-in">
-
               <picture>
                 <source srcSet="./marco-padrinos.webp" type="image/webp" />
                 <img src="./marco-padrinos.png" alt="Padrinos" className="block mx-auto mb-4" width={400} height={450} />
               </picture>
 
               <figcaption className="text-white">Padrinos</figcaption>
+              <figcaption className="text-4xl text-white">Roxana Díaz &<span className="block">Daniel Pérez</span></figcaption>
+            </figure>
+
+            <figure className="fade-in">
+              <picture>
+                <source srcSet="./marco-tios.webp" type="image/webp" />
+                <img src="./marco-tios.png" alt="tios" className="block mx-auto mb-4" width={400} height={450} />
+              </picture>
+
+              <figcaption className="text-white">Tíos</figcaption>
               <figcaption className="text-4xl text-white">Roxana Díaz &<span className="block">Daniel Pérez</span></figcaption>
             </figure>
 

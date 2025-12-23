@@ -25,7 +25,7 @@ body {
 }
 
 #padrinos {
-  @apply bg-[url('/bg-fondoRe.jpg')] bg-repeat-y bg-center bg-contain md:bg-cover
+  @apply bg-[url('/bg-fondoRe.jpg')] bg-repeat bg-center bg-contain
 }
 
 #vestimenta{
