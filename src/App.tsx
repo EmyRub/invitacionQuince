@@ -193,7 +193,7 @@ function App() {
         <div className="mx-auto max-w-11/12 lg:max-w-5xl">
           <h2 className="fade-in">Código de vestimenta</h2>
           <div className="flex justify-center gap-4 my-8 fade-in">
-             <img src="./dresscode.png" alt="dressCode" className="block mx-auto" width={150} height={25} />      
+            <img src="./dresscode.png" alt="dressCode" className="block mx-auto" width={150} height={25} />
           </div>
           <p className="text-lila fade-in">FORMAL</p>
 
@@ -243,6 +243,24 @@ function App() {
 
             <figure className="fade-in flex-11/12 md:flex-1/3 lg:flex-1/4">
               <picture>
+                <source srcSet="./marco-padrinos.webp" type="image/webp" />
+                <img src="./marco-padrinos.png" alt="padrinos" className="block mx-auto mb-4" width={400} height={450} />
+              </picture>
+              <figcaption className="text-white text-4xl relative lg:-right-32 hidden lg:block">Mis padrinos</figcaption>
+            </figure>
+
+            <figure className="fade-in flex-11/12 md:flex-1/3 lg:flex-1/4">
+              <picture>
+                <source srcSet="./marco-padrino.webp" type="image/webp" />
+                <img src="./marco-padrino.png" alt="padrino" className="block mx-auto mb-4" width={400} height={450} />
+              </picture>
+              <figcaption className="text-white text-4xl lg:hidden">Mis padrinos</figcaption>
+            </figure>
+
+
+
+            <figure className="fade-in flex-11/12 md:flex-1/3 lg:flex-1/4">
+              <picture>
                 <source srcSet="./marco-hermanita.webp" type="image/webp" />
                 <img src="./marco-hermanita.png" alt="hermanita" className="block mx-auto mb-4" width={400} height={450} />
               </picture>
@@ -258,17 +276,7 @@ function App() {
               <figcaption className="text-white text-4xl">Mi abuela</figcaption>
             </figure>
 
-            <picture className="fade-in flex-11/12 md:flex-1/3 lg:flex-1/4">
-              <source srcSet="./marco-padrinos.webp" type="image/webp" />
-              <img src="./marco-padrinos.png" alt="padrinos" className="block mx-auto mb-4" width={400} height={450} />
-            </picture>
-
-            <picture className="fade-in flex-11/12 md:flex-1/3 lg:flex-1/4">
-              <source srcSet="./marco-padrino.webp" type="image/webp" />
-              <img src="./marco-padrino.png" alt="padrino" className="block mx-auto mb-4" width={400} height={450} />
-            </picture>
           </div>
-          <p className="center text-4xl lg:text-xl text-white fade-in">Mis padrinos</p>
 
           <a
             target="_blanc"
