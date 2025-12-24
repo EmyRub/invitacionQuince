@@ -238,7 +238,7 @@ function App() {
                 <img src="./marco-padres.png" alt="Padres" className="block mx-auto mb-4" width={400} height={450} />
               </picture>
 
-              <figcaption className="text-white text-4xl">Mis Padres</figcaption>
+              <figcaption className="text-white text-4xl">Mis padres</figcaption>
             </figure>
 
             <figure className="fade-in flex-11/12 md:flex-1/3 lg:flex-1/4">
