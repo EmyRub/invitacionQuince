@@ -184,7 +184,7 @@ function App() {
         <div className="fade-in">
           <FaMapMarkerAlt className="text-lila-dark text-5xl mx-auto mt-11" />
           <p>Jardín de eventos Azarel</p>
-          <a href="https://maps.app.goo.gl/9H9agY5havCT3Z7o7" className="block mx-auto mt-4 max-w-2/3 md:max-w-80 text-2xl lg:text-4xl">Ver ubicación</a>
+          <a href="https://maps.app.goo.gl/9H9agY5havCT3Z7o7" target="_blanc" className="block mx-auto mt-4 max-w-2/3 md:max-w-80 text-2xl lg:text-4xl">Ver ubicación</a>
         </div>
 
       </section>
@@ -198,7 +198,7 @@ function App() {
           <p className="text-lila fade-in">FORMAL</p>
 
           <h3 className="mt-20 fade-in">Sugerencia</h3>
-          <p className="text-2xl lg:text-4xl! max-w-4xl mx-auto text-lila fade-in">Amablemente, el color lila únicamente para la quinceañera</p>
+          <p className="text-2xl lg:text-4xl! max-w-4xl mx-auto text-lila fade-in font-extrabold">Amablemente, el color lila únicamente para la quinceañera</p>
         </div>
       </section>
 
@@ -227,53 +227,58 @@ function App() {
 
       <section id="padrinos" className="py-10 lg:py-16 lg:mt-12">
         <div className="mx-auto max-w-11/12 lg:max-w-5xl">
-          <h2 className="fade-in text-white! text-base/5 mb-10!">Te esperamos en compañía de...</h2>
+          <h2 className="fade-in text-white! text-base/5 mb-16!">Te esperamos en compañía de...</h2>
 
           <div className="flex flex-wrap justify-center gap-12 lg:gap-6">
 
             <figure className="fade-in flex-1/4">
-
+              <figcaption className="text-white text-4xl">Mis padres</figcaption>
               <picture>
                 <source srcSet="./marco-padres.webp" type="image/webp" />
                 <img src="./marco-padres.png" alt="Padres" className="block mx-auto mb-4" width={400} height={450} />
               </picture>
 
-              <figcaption className="text-white text-4xl">Mis padres</figcaption>
             </figure>
 
             <figure className="fade-in flex-11/12 md:flex-1/3 lg:flex-1/4">
-              <picture>
+              <figcaption className="text-white text-4xl relative lg:-right-32 hidden lg:block">Mis padrinos</figcaption>
+             
+              <picture >
                 <source srcSet="./marco-padrinos.webp" type="image/webp" />
                 <img src="./marco-padrinos.png" alt="padrinos" className="block mx-auto mb-4" width={400} height={450} />
               </picture>
-              <figcaption className="text-white text-4xl relative lg:-right-32 hidden lg:block">Mis padrinos</figcaption>
+
             </figure>
 
             <figure className="fade-in flex-11/12 md:flex-1/3 lg:flex-1/4">
-              <picture>
+              <figcaption className="text-white text-4xl lg:hidden">Mis padrinos</figcaption>
+            
+              <picture className="lg:mt-12 block">
                 <source srcSet="./marco-padrino.webp" type="image/webp" />
                 <img src="./marco-padrino.png" alt="padrino" className="block mx-auto mb-4" width={400} height={450} />
               </picture>
-              <figcaption className="text-white text-4xl lg:hidden">Mis padrinos</figcaption>
+
             </figure>
 
 
 
             <figure className="fade-in flex-11/12 md:flex-1/3 lg:flex-1/4">
+              <figcaption className="text-white text-4xl">Mi hermanita</figcaption>
               <picture>
                 <source srcSet="./marco-hermanita.webp" type="image/webp" />
                 <img src="./marco-hermanita.png" alt="hermanita" className="block mx-auto mb-4" width={400} height={450} />
               </picture>
 
-              <figcaption className="text-white text-4xl">Mi hermanita</figcaption>
+
             </figure>
 
             <figure className="fade-in flex-11/12 md:flex-1/3 lg:flex-1/4">
+              <figcaption className="text-white text-4xl">Mi abuela</figcaption>
               <picture>
                 <source srcSet="./marco-abuela.webp" type="image/webp" />
                 <img src="./marco-abuela.png" alt="abuela" className="block mx-auto mb-4" width={400} height={450} />
               </picture>
-              <figcaption className="text-white text-4xl">Mi abuela</figcaption>
+
             </figure>
 
           </div>
