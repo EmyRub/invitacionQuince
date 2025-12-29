@@ -221,7 +221,26 @@ function App() {
           <SwiperSlide><img src="./galeria/05.JPG" alt="galeria" /></SwiperSlide>
           <SwiperSlide><img src="./galeria/06.jpg" alt="galeria" /></SwiperSlide>
           <SwiperSlide><img src="./galeria/07.jpg" alt="galeria" /></SwiperSlide>
-
+          <SwiperSlide><img src="./galeria/08.jpg" alt="galeria" /></SwiperSlide>
+          <SwiperSlide><img src="./galeria/09.jpg" alt="galeria" /></SwiperSlide>
+          <SwiperSlide><img src="./galeria/10.png" alt="galeria" /></SwiperSlide>
+          <SwiperSlide><img src="./galeria/11.png" alt="galeria" /></SwiperSlide>
+          <SwiperSlide><img src="./galeria/12.jpg" alt="galeria" /></SwiperSlide>
+          <SwiperSlide><img src="./galeria/13.jpg" alt="galeria" /></SwiperSlide>
+          <SwiperSlide><img src="./galeria/14.jpg" alt="galeria" /></SwiperSlide>
+          <SwiperSlide><img src="./galeria/15.jpg" alt="galeria" /></SwiperSlide>
+          <SwiperSlide><img src="./galeria/16.jpg" alt="galeria" /></SwiperSlide>
+          <SwiperSlide><img src="./galeria/17.jpg" alt="galeria" /></SwiperSlide>
+          <SwiperSlide><img src="./galeria/18.jpg" alt="galeria" /></SwiperSlide>
+          <SwiperSlide><img src="./galeria/19.jpg" alt="galeria" /></SwiperSlide>
+          <SwiperSlide><img src="./galeria/20.png" alt="galeria" /></SwiperSlide>
+          <SwiperSlide><img src="./galeria/21.png" alt="galeria" /></SwiperSlide>
+          <SwiperSlide><img src="./galeria/22.png" alt="galeria" /></SwiperSlide>
+          <SwiperSlide><img src="./galeria/23.png" alt="galeria" /></SwiperSlide>
+          <SwiperSlide><img src="./galeria/24.png" alt="galeria" /></SwiperSlide>
+          <SwiperSlide><img src="./galeria/25.png" alt="galeria" /></SwiperSlide>
+          <SwiperSlide><img src="./galeria/26.png" alt="galeria" /></SwiperSlide>
+          <SwiperSlide><img src="./galeria/27.png" alt="galeria" /></SwiperSlide>
         </Swiper>
       </section>
 
@@ -241,7 +260,7 @@ function App() {
             </figure>
 
             <figure className="fade-in flex-11/12 md:flex-1/3 lg:flex-1/4">
-              <figcaption className="text-white text-4xl relative lg:-right-32 hidden lg:block">Mis padrinos</figcaption>
+              <figcaption className="text-white text-4xl relative lg:-right-32">Mis padrinos</figcaption>
              
               <picture >
                 <source srcSet="./marco-padrinos.webp" type="image/webp" />
@@ -250,17 +269,13 @@ function App() {
 
             </figure>
 
-            <figure className="fade-in flex-11/12 md:flex-1/3 lg:flex-1/4">
-              <figcaption className="text-white text-4xl lg:hidden">Mis padrinos</figcaption>
+            <figure className="fade-in flex-11/12 md:flex-1/3 lg:flex-1/4">           
             
               <picture className="lg:mt-12 block">
                 <source srcSet="./marco-padrino.webp" type="image/webp" />
                 <img src="./marco-padrino.png" alt="padrino" className="block mx-auto mb-4" width={400} height={450} />
               </picture>
-
             </figure>
-
-
 
             <figure className="fade-in flex-11/12 md:flex-1/3 lg:flex-1/4">
               <figcaption className="text-white text-4xl">Mi hermanita</figcaption>
