@@ -6,7 +6,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-// import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { useFadeIn } from "./hooks/useFadeIn";
@@ -16,27 +16,27 @@ import MusicGate from "./MusicGate.tsx";
 
 function App() {
   useFadeIn()
-  // const [scrollY, setScrollY] = useState(0)
+  const [scrollY, setScrollY] = useState(0)
 
   /**Cortina flores */
-  // useEffect(() => {
-  //   const onScroll = () => setScrollY(window.scrollY);
-  //   window.addEventListener("scroll", onScroll);
-  //   return () => window.removeEventListener("scroll", onScroll);
-  // }, []);
+  useEffect(() => {
+    const onScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
 
-  // Cuántos píxeles tarda en abrirse
-  // const maxScroll = 300;
-  // const progress = Math.min(scrollY / maxScroll, 1);
+  //Cuántos píxeles tarda en abrirse
+  const maxScroll = 300;
+  const progress = Math.min(scrollY / maxScroll, 1);
 
 
   return (
     <>
       <MusicGate />
-      {/* <div className="fixed inset-0 z-40 pointer-events-none overflow-hidden">
+      <div className="fixed inset-0 z-40 pointer-events-none overflow-hidden">
 
-        IZQUIERDA 
+        {/* IZQUIERDA  */}
         <picture>
           <source
             srcSet="./bg-flowerIzq.webp"
@@ -61,9 +61,9 @@ function App() {
             }}
             className="absolute left-0 top-0 h-full w-full lg:w-3/4 object-cover object-bottom-right transition-transform duration-75"
           />
-        </picture>*/}
+        </picture>
 
-      {/* DERECHA 
+        {/* DERECHA  */}
         <picture>
           <source
             srcSet="./bg-flowerIzq.webp"
@@ -90,7 +90,7 @@ function App() {
           />
         </picture>
 
-      </div>*/}
+      </div>
 
       <div className="min-h-screen lg:min-h-[180vh]">
 
@@ -147,7 +147,7 @@ function App() {
         <span className="max-w-11/12 md:max-w-xl mx-auto flex justify-center">
           <FlipClockCountdown
             className="flip-responsive"
-            to="2026-02-21T00:00:00-06:00"
+            to="2027-02-21T00:00:00-06:00"
             labels={['Días', 'Horas', 'Minutos', 'Segundos']}
             digitBlockStyle={{
               width: 60,
@@ -298,10 +298,9 @@ function App() {
 
           </div>
 
-          <a
-            target="_blanc"
+          <a           
             className="fade-in block mx-auto mt-12 lg:mt-16 text-2xl lg:text-4xl"
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfI0WBrpBbwDtsmnOTd4rizEUuFZ1oUTjFcxOsHVQwoiJxIOQ/viewform"
+            href="#"
           >
             Confirmar asistencia
           </a>
